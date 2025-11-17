@@ -1,5 +1,7 @@
 # FNG — Fear & Greed Index
 
+![FNG Screenshot](fng.png)
+
 ## 简介（中文）
 - 桌面应用（Electron），展示恐慌与贪婪指数的历史曲线
 - 支持范围：最近一周、最近一月、最近一年、MAX（全部历史）

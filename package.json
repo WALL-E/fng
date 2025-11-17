@@ -1,0 +1,47 @@
+{
+  "name": "fng-mac",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.js",
+  "type": "module",
+  "author": "TRAE",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --mac",
+    "dist:win": "electron-builder --win",
+    "dist:linux": "electron-builder --linux"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.trae.fng",
+    "productName": "FNG",
+    "files": [
+      "main.js",
+      "renderer/**",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.finance",
+      "target": [
+        "dmg"
+      ],
+      "artifactName": "FNG-${version}.dmg"
+    },
+    "win": {
+      "target": [
+        "zip"
+      ],
+      "artifactName": "FNG-${version}-win.zip"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "artifactName": "FNG-${version}.AppImage",
+      "category": "Utility"
+    }
+  }
+}
